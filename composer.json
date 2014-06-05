@@ -1,0 +1,25 @@
+{
+    "name": "dmyers/laravel-activity",
+    "description": "A simple activity feed package for Laravel 4.",
+    "keywords": ["laravel", "newsfeed", "activity stream", "activity feed"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Derek Myers",
+            "email": "arcticpro@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.x"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Dmyers\\Activity": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}

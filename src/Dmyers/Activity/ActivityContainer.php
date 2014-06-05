@@ -1,0 +1,91 @@
+<?php namespace Dmyers\Activity;
+
+// currently unused
+
+class ActivityContainer
+{
+	protected $activity_id;
+	protected $item;
+	protected $doer;
+	protected $victim;
+	protected $action;
+	
+	public function __construct() {}
+	
+	public function adapter()
+	{
+		return $this->adapter;
+	}
+	
+	public function item()
+	{
+		$this->item = $item;
+		return $this;
+	}
+	
+	public function action($action)
+	{
+		$this->action = $action;
+		return $this;
+	}
+	
+	public function doer($doer)
+	{
+		$this->doer = $doer;
+		return $this;
+	}
+	
+	public function victim($victim)
+	{
+		$this->victim = $victim;
+		return $this;
+	}
+	
+	public function find(array $params = array())
+	{
+		return $this->adapter()->find($params);
+	}
+	
+	public function create()
+	{
+		$activity_id = $this->adapter()->create(array(
+			'doer_id'   => $this->doer->id,
+			'item_id'   => $this->item->id,
+			'item_type' => get_class($this->item),
+		));
+		
+		$this->activityId($activity_id);
+		
+		return true;
+	}
+	
+	public function update()
+	{
+		$activity_id = $this->activity_id;
+		
+		$updated = $this->adapter()->update($activity_id, array(
+			'doer_id'   => $this->doer->id,
+			'item_id'   => $this->item->id,
+			'item_type' => get_class($this->item),
+		));
+		
+		if ($deleted) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public function delete()
+	{
+		$activity_id = $this->activity_id;
+		
+		$deleted = $this->adapter()->destroy($activity_id);
+		
+		if ($deleted) {
+			return true;
+		}
+		
+		return false;
+	}
+}
