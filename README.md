@@ -30,7 +30,7 @@ Add a class alias to `app/config/app.php`, within the `aliases` array.
 )
 ```
 
-Publish the package's mode, migration, and view.
+Publish the package's model, migration, and view.
 
 ```console
 php artisan model:publish dmyers/laravel-activity
