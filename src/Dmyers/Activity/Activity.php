@@ -51,7 +51,7 @@ class Activity extends \Eloquent
 	
 	// todo how to aggregate/combine multiples together
 	
-	public static function renderActivityFeed($activity)
+	public static function renderFeed($activity)
 	{
 		return \View::make('laravel-activity::feed')->with('feed', $activity);
 	}
