@@ -4,7 +4,7 @@
 
 class ActivityContainer
 {
-	protected $activity_id;
+	protected $id;
 	protected $item;
 	protected $doer;
 	protected $victim;
@@ -54,7 +54,7 @@ class ActivityContainer
 			'item_type' => get_class($this->item),
 		));
 		
-		$this->activityId($activity_id);
+		$this->setActivityId($activity_id);
 		
 		return true;
 	}
@@ -87,5 +87,10 @@ class ActivityContainer
 		}
 		
 		return false;
+	}
+	
+	public function setActivityId($id)
+	{
+		$this->id = $id;
 	}
 }
