@@ -14,6 +14,10 @@ class ActivityContainer
 	
 	public function adapter()
 	{
+		if (!isset($this->adapter)) {
+			$this->adapter = new Adapter\Database();
+		}
+		
 		return $this->adapter;
 	}
 	
