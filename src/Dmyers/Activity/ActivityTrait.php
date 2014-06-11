@@ -129,7 +129,7 @@ trait ActivityTrait
 	
 	public function pushActivityFeed($type, $doer_id, $victim_id)
 	{
-		return Activity::pushActivityFeed();
+		return Activity::pushFeed();
 	}
 	
 }

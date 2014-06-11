@@ -55,5 +55,11 @@ class Activity extends \Eloquent
 	{
 		return \View::make('laravel-activity::feed')->with('feed', $activity);
 	}
-
+	
+	// todo figure out how to push/clone feeds
+	
+	public function pushFeed()
+	{
+		
+	}
 }
