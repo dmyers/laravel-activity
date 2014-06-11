@@ -21,7 +21,7 @@ class ActivityContainer
 		return $this->adapter;
 	}
 	
-	public function item()
+	public function item($item)
 	{
 		$this->item = $item;
 		return $this;
