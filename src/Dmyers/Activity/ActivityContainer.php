@@ -69,7 +69,7 @@ class ActivityContainer
 			'item_type' => get_class($this->item),
 		));
 		
-		if ($deleted) {
+		if ($updated) {
 			return true;
 		}
 		
