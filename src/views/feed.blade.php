@@ -5,8 +5,8 @@
 			?>
 			<li class="activity">
 				<span class="doer">
-					<img src="http://gravatar.com/avatar/<?php echo md5($activity->doer->email); ?>?s=50" alt="<?php echo $activity->doer->name; ?>" class="avatar" />
-					<a href="#"><?php echo $activity->doer->name; ?></a>
+					<img src="http://gravatar.com/avatar/<?php echo md5($activity->doer->email); ?>?s=50" alt="<?php echo $activity->doer->activity_display_name; ?>" class="avatar" />
+					<a href="#"><?php echo $activity->doer->activity_display_name; ?></a>
 				</span>
 				
 				<span class="action">
@@ -15,7 +15,7 @@
 				
 				<?php if ($activity->victim): ?>
 					<span class="victim">
-						<a href="#"><?php echo $activity->victim->name; ?></a>
+						<a href="#"><?php echo $activity->victim->activity_display_name; ?></a>
 					</span>
 				<?php endif; ?>
 				
@@ -27,7 +27,7 @@
 				
 				<?php if ($activity->item): ?>
 					<span class="item">
-						<a href="#"><?php echo $activity->item->title; ?></a>
+						<a href="#"><?php echo $activity->item->activity_display_name; ?></a>
 					</span>
 				<?php endif; ?>
 				
