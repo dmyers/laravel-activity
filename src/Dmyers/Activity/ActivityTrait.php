@@ -70,7 +70,7 @@ trait ActivityTrait
 		
 		$feed = $activity->get();
 		
-		return Activity::renderActivityFeed($feed);
+		return Activity::renderFeed($feed);
 	}
 	
 	public function addActivity($action, $doer_id = null, $victim_id = null, $feed_type = null)
