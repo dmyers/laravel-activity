@@ -4,6 +4,8 @@
 
 interface ActivityInterface {
 	
+	public function getActivityDisplayNameAttribute();
+	
 	public function getActivity();
 	
 	public function trackActivity();
