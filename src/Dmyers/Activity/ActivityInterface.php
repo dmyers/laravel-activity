@@ -12,4 +12,6 @@ interface ActivityInterface {
 	
 	public function deleteActivity();
 	
+	public function renderActivityFeed();
+	
 }
