@@ -6,10 +6,10 @@ interface ActivityInterface {
 	
 	public function getActivityDisplayNameAttribute();
 	
-	public function getActivity();
+	public function activity();
 	
-	public function trackActivity();
+	public function addActivity();
 	
-	public function removeActivity();
+	public function deleteActivity();
 	
 }
