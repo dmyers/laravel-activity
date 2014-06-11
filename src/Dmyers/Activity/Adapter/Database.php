@@ -2,7 +2,7 @@
 
 // currently unused
 
-class Mysql extends Base
+class Database extends Base
 {
 	public function find(array $params);
 	
