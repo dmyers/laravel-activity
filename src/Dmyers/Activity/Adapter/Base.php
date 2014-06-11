@@ -4,9 +4,7 @@
 
 abstract class Base
 {
-	abstract public function find($id);
-	
-	abstract public function query(array $params);
+	abstract public function find(array $params);
 	
 	abstract public function create(array $params);
 	

@@ -4,9 +4,7 @@
 
 class Mysql extends Base
 {
-	public function find($id);
-	
-	public function query(array $params);
+	public function find(array $params);
 	
 	public function create(array $params);
 	
