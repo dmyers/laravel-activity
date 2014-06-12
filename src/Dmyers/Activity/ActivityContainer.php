@@ -155,9 +155,9 @@ class ActivityContainer
 		return false;
 	}
 	
-	public function renderFeed($activity)
+	public function renderFeed($activity, $view = 'laravel-activity::feed')
 	{
-		return \View::make('laravel-activity::feed')->with('feed', $activity);
+		return \View::make($view)->with('feed', $activity);
 	}
 	
 	public function setActivityId($id)
