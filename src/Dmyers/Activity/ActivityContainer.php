@@ -155,6 +155,13 @@ class ActivityContainer
 		return false;
 	}
 	
+	// todo figure out how to push/clone feeds
+	
+	public function pushFeed()
+	{
+		
+	}
+	
 	public function renderFeed($activity, $view = 'laravel-activity::feed')
 	{
 		return \View::make($view)->with('feed', $activity);
