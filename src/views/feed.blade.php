@@ -5,7 +5,7 @@
 			?>
 			<li class="activity">
 				<span class="doer">
-					<img src="http://gravatar.com/avatar/<?php echo md5($activity->doer->email); ?>?s=50" alt="<?php echo $activity->doer->activity_display_name; ?>" class="avatar" />
+					<img src="http://gravatar.com/avatar/<?php echo md5($activity->doer->email); ?>?s=25" alt="<?php echo $activity->doer->activity_display_name; ?>" class="avatar" />
 					<a href="#"><?php echo $activity->doer->activity_display_name; ?></a>
 				</span>
 				
