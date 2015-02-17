@@ -24,12 +24,14 @@ class Activity extends \Eloquent
 	
 	public function getDoerAttribute()
 	{
-		return \User::find($this->doer_id);
+		$authModel = Config::get('auth.model');
+        	return with(new $authModel)->find($this->doer_id);
 	}
 	
 	public function getVictimAttribute()
 	{
-		return \User::find($this->victim_id);
+		$authModel = Config::get('auth.model');
+        	return with(new $authModel)->find($this->victim_id);
 	}
 	
 	public function getItemAttribute()
