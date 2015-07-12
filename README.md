@@ -43,9 +43,9 @@ Finally, add the trait to the models you want to track activity on.
 ```php
 use ActivityTrait;
 
-protected $activity_item_id = 'id';
+protected $activity_item_field = 'id';
 
-protected $activity_doer_id = 'user_id';
+protected $activity_doer_field = 'user_id';
 
 protected $activity_events = array('created', 'updated', 'deleted');
 

@@ -76,8 +76,8 @@ trait ActivityTrait
 	public function addActivity($action, $doer_id = null, $victim_id = null, $feed_type = null)
 	{
 		if (empty($doer_id)) {
-			if (!empty($this->activity_item_id)) {
-				$doer_id = $this->{$this->activity_doer_id};
+			if (!empty($this->activity_item_field)) {
+				$doer_id = $this->{$this->activity_doer_field};
 			}
 			else {
 				// todo track global user from Auth::user() or config or class object
@@ -89,7 +89,7 @@ trait ActivityTrait
 			'doer_id'   => $doer_id,
 			'victim_id' => $victim_id,
 			'action'    => $action,
-			'item_id'   => $this->{$this->activity_item_id},
+			'item_id'   => $this->{$this->activity_item_field},
 			'item_type' => static::activityItemType(),
 			'feed_type' => isset($this->activity_feed_type) ? $this->activity_feed_type : $feed_type,
 		);
