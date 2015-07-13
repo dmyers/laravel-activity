@@ -52,7 +52,7 @@ class ActivityTableCommand extends Command {
 	}
 
 	/**
-	 * Get the contents of the sluggable migration stub.
+	 * Get the contents of the activity migration stub.
 	 *
 	 * @return string
 	 */
